@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/speed_limit_bg"
+        android:text="888"
+        style="@style/"
+        android:textColor="@color/light_grey_trasparent2"
+        android:textSize="150sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/speed_limit"
+        android:text="30"
+        android:layout_alignRight="@+id/speed_limit_bg"
+        android:shadowColor="@color/cyan"
+        android:textColor="@color/cyan"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="20"
+        android:gravity="center"
+        android:textSize="150sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/cyan"
+        android:textSize="20sp"
+        android:text="km/h"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/speed_limit_bg"
+        android:layout_toRightOf="@+id/speed_limit_bg"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"/>
+
+</RelativeLayout>

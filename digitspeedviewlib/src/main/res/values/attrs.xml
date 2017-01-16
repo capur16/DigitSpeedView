@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DigitSpeedView">
+        <attr name="speedTextColor" format="color"/>
+        <attr name="unitTextColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="speedTextSize" format="dimension" />
+        <attr name="unitTextSize" format="dimension" />
+        <attr name="unit" format="string" />
+        <attr name="speed" format="integer" />
+    </declare-styleable>
+</resources>
