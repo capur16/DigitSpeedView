@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,10 +23,9 @@ public class DigitSpeedView extends RelativeLayout {
     private float speedTextSize = dpTOpx(40f);
     private float unitTextSize = dpTOpx(10f);
     private String speed = "0";
-    private final String color = "#99cc00";
-    private int speedTextColor = Color.parseColor(color);
-    private int unitTextColor = Color.parseColor(color);
-    private int backgoundColor = Color.parseColor(color);
+    private int speedTextColor;
+    private int unitTextColor;
+    private int backgoundColor = Color.BLACK;
     private TextView mSpeedBgTextView;
     private TextView mSpeedTextView;
     private TextView mSpeedUnitTextView;
@@ -49,6 +49,8 @@ public class DigitSpeedView extends RelativeLayout {
     }
 
     private void init(Context context) {
+        speedTextColor = ContextCompat.getColor(context, R.color.green);
+        unitTextColor = ContextCompat.getColor(context, R.color.green);
         final View rootView = LayoutInflater.from(context).inflate(R.layout.digit_speed_view, this, true);
         mainLayout = (RelativeLayout) rootView.findViewById(R.id.digit_speed_main);
         mSpeedTextView = (TextView) rootView.findViewById(R.id.digit_speed);
