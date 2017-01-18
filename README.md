@@ -5,9 +5,9 @@
 
 Awesome digital speedometer for android, [see project on GitHub](https://github.com/capur16/DigitSpeedView).
 
-<img src="https://github.com/capur16/DigitSpeedView/blob/master/images/DigitSpeedView1.png" width="30%" />
-<img src="https://github.com/capur16/DigitSpeedView/blob/master/images/DigitSpeedView2.png" width="30%" />
-<img src="https://github.com/capur16/DigitSpeedView/blob/master/images/DigitSpeedView3.png" width="30%" />
+<img src="https://github.com/capur16/DigitSpeedView/blob/master/images/DigitSpeedView1.png" width="33%" />
+<img src="https://github.com/capur16/DigitSpeedView/blob/master/images/DigitSpeedView2.png" width="33%" />
+<img src="https://github.com/capur16/DigitSpeedView/blob/master/images/DigitSpeedView3.png" width="33%" />
 
 Compatibility
 -------------
