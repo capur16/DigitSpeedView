@@ -22,6 +22,7 @@
                 android:layout_weight="1"
                 app:backgroundDrawable="@drawable/my_background"
                 app:speed="185"
+                app:showUnit="true"
                 app:speedTextColor="@android:color/white"
                 app:speedTextSize="20dp"
                 app:unitTextColor="@android:color/white"
