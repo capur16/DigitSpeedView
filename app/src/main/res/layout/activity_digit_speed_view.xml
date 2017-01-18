@@ -10,14 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.github.capur16.digitspeedviewlib.DigitSpeedView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:speed="120"
-            app:speedTextSize="50dp"
-            app:unit="Km/h"
-            app:unitTextSize="8dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +24,6 @@
                 app:speed="185"
                 app:speedTextColor="@android:color/white"
                 app:speedTextSize="20dp"
-                app:unit="Km/h"
                 app:unitTextColor="@android:color/white"
                 app:unitTextSize="5dp" />
             <com.github.capur16.digitspeedviewlib.DigitSpeedView
@@ -50,5 +41,20 @@
 
 
         </LinearLayout>
+
+        <com.github.capur16.digitspeedviewlib.DigitSpeedView
+            android:id="@+id/digit_speed_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:speed="0"
+            app:speedTextSize="50dp"
+            app:unit="Km/h"
+            app:unitTextSize="8dp" />
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seek"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="250"/>
     </LinearLayout>
 </ScrollView>

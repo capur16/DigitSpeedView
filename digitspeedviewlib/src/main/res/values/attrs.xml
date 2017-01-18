@@ -7,8 +7,9 @@
         <attr name="speedTextSize" format="dimension" />
         <attr name="unitTextSize" format="dimension" />
         <attr name="unit" format="string" />
-        <attr name="speed" format="string" />
+        <attr name="speed" format="integer" />
         <attr name="backgroundDrawable" format="integer" />
         <attr name="disableBackgroundImage" format="boolean" />
+        <attr name="showUnit" format="boolean" />
     </declare-styleable>
 </resources>

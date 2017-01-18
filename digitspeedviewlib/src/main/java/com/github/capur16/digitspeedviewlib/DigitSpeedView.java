@@ -22,7 +22,7 @@ public class DigitSpeedView extends RelativeLayout {
     private String unit = "Km/h";
     private float speedTextSize = dpTOpx(40f);
     private float unitTextSize = dpTOpx(10f);
-    private String speed = "0";
+    private int speed = 0;
     private int speedTextColor;
     private int unitTextColor;
     private int backgoundColor = Color.BLACK;
@@ -30,6 +30,7 @@ public class DigitSpeedView extends RelativeLayout {
     private TextView mSpeedTextView;
     private TextView mSpeedUnitTextView;
     private RelativeLayout mainLayout;
+    private boolean showUnit = true;
 
     public DigitSpeedView(Context context) {
         super(context);
@@ -68,8 +69,11 @@ public class DigitSpeedView extends RelativeLayout {
         unitTextSize = a.getDimension(R.styleable.DigitSpeedView_unitTextSize, unitTextSize);
         speedTextColor = a.getColor(R.styleable.DigitSpeedView_speedTextColor, speedTextColor);
         unitTextColor = a.getColor(R.styleable.DigitSpeedView_unitTextColor, unitTextColor);
-        String speed = a.getString(R.styleable.DigitSpeedView_speed);
-        this.speed = (speed != null) ? speed : this.speed;
+        showUnit = a.getBoolean(R.styleable.DigitSpeedView_showUnit, showUnit);
+        if(!showUnit) {
+            mSpeedUnitTextView.setVisibility(GONE);
+        }
+        speed = a.getInt(R.styleable.DigitSpeedView_speed, speed);
         backgoundColor = a.getColor(R.styleable.DigitSpeedView_backgroundColor, backgoundColor);
         String unit = a.getString(R.styleable.DigitSpeedView_unit);
         this.unit =  (unit != null) ? unit : this.unit;
@@ -88,7 +92,7 @@ public class DigitSpeedView extends RelativeLayout {
 
     private void initAttributeValue() {
         mSpeedTextView.setTextColor(speedTextColor);
-        mSpeedTextView.setText(speed);
+        mSpeedTextView.setText(""+speed);
         mSpeedTextView.setShadowLayer(20, 0, 0, speedTextColor);
         mSpeedTextView.setTextSize(speedTextSize);
         mSpeedBgTextView.setTextSize(speedTextSize);
@@ -99,9 +103,35 @@ public class DigitSpeedView extends RelativeLayout {
 
     }
 
-    public void updateSpeed(String speed) {
+    /**
+     * update speed
+     * @param speed to update
+     */
+    public void updateSpeed(int speed) {
         this.speed = speed;
-        mSpeedTextView.setText(speed);
+        mSpeedTextView.setText(""+speed);
+    }
+
+    /**
+     * Show unit text
+     */
+    public void showUnit() {
+        mSpeedUnitTextView.setVisibility(VISIBLE);
+    }
+
+    /**
+     * Hide unit text
+     */
+    public void hideUnit() {
+        mSpeedUnitTextView.setVisibility(GONE);
+    }
+
+    /**
+     *
+     * @return current speed
+     */
+    public int getSpeed() {
+        return speed;
     }
 
     /**
@@ -121,4 +151,6 @@ public class DigitSpeedView extends RelativeLayout {
     public float pxTOdp(float px) {
         return px / getContext().getResources().getDisplayMetrics().density;
     }
+
+
 }
