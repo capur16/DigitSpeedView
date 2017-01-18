@@ -1,9 +1,13 @@
 # DigitSpeedView
 
-[![API](https://img.shields.io/badge/API-+14-green.svg?style=flat)](#)
+[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
 [![Download](https://api.bintray.com/packages/capur16/maven/DigitSpeedView/images/download.svg?version=1.0.2) ](https://bintray.com/capur16/maven/DigitSpeedView/1.0.2/link)
 
 Awesome digital speedometer for android, [see project on GitHub](https://github.com/capur16/DigitSpeedView).
+
+<img src="https://github.com/capur16/DigitSpeedView/blob/master/images/DigitSpeedView1.png" width="30%" />
+<img src="https://github.com/capur16/DigitSpeedView/blob/master/images/DigitSpeedView2.png" width="30%" />
+<img src="https://github.com/capur16/DigitSpeedView/blob/master/images/DigitSpeedView3.png" width="30%" />
 
 Compatibility
 -------------
