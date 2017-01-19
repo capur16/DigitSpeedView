@@ -58,7 +58,7 @@ Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 group = 'com.github.capur16'
-version = '1.0.2'
+version = '1.0.3'
 
 bintray {
     user = properties.getProperty("bintray.user")
@@ -68,10 +68,10 @@ bintray {
         name = 'DigitSpeedView'
 
         version {
-            name = '1.0.2'
+            name = '1.0.3'
             desc = 'Awesome digital speedometer for android'
             released  = new Date()
-            vcsTag = '1.0.2'
+            vcsTag = '1.0.3'
         }
 
         licenses = ['Apache-2.0']

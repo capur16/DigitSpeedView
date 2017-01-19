@@ -31,6 +31,7 @@ public class DigitSpeedView extends RelativeLayout {
     private TextView mSpeedUnitTextView;
     private RelativeLayout mainLayout;
     private boolean showUnit = true;
+    private OnSpeedChangeListener onSpeedChangeListener;
 
     public DigitSpeedView(Context context) {
         super(context);
@@ -83,7 +84,12 @@ public class DigitSpeedView extends RelativeLayout {
         } else {
             Drawable drawable = a.getDrawable(R.styleable.DigitSpeedView_backgroundDrawable);
             if (drawable != null) {
-                mainLayout.setBackground(drawable);
+                if (android.os.Build.VERSION.SDK_INT >= 16) {
+                    mainLayout.setBackground(drawable);
+                } else {
+                    mainLayout.setBackgroundDrawable( drawable );
+                }
+
             }
         }
         a.recycle();
@@ -108,8 +114,12 @@ public class DigitSpeedView extends RelativeLayout {
      * @param speed to update
      */
     public void updateSpeed(int speed) {
+        boolean isSpeedUp = speed > this.speed;
         this.speed = speed;
         mSpeedTextView.setText(""+speed);
+        if (onSpeedChangeListener != null){
+            onSpeedChangeListener.onSpeedChange(this, isSpeedUp);
+        }
     }
 
     /**
@@ -152,5 +162,12 @@ public class DigitSpeedView extends RelativeLayout {
         return px / getContext().getResources().getDisplayMetrics().density;
     }
 
+    /**
+     * Register a callback to be invoked when speed value changed (in integer).
+     * @param onSpeedChangeListener maybe null, The callback that will run.
+     */
+    public void setOnSpeedChangeListener(OnSpeedChangeListener onSpeedChangeListener) {
+        this.onSpeedChangeListener = onSpeedChangeListener;
+    }
 
 }
