@@ -1,7 +1,7 @@
 # DigitSpeedView
 
 [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
-[![Download](https://api.bintray.com/packages/capur16/maven/DigitSpeedView/images/download.svg?version=1.0.2) ](https://bintray.com/capur16/maven/DigitSpeedView/1.0.2/link)
+[ ![Download](https://api.bintray.com/packages/capur16/maven/DigitSpeedView/images/download.svg?version=1.0.3) ](https://bintray.com/capur16/maven/DigitSpeedView/1.0.3/link)
 
 Awesome digital speedometer for android, [see project on GitHub](https://github.com/capur16/DigitSpeedView).
 
@@ -70,6 +70,27 @@ Advanced Usage
                 app:unitTextColor="@android:color/holo_blue_light"
                 app:unitTextSize="5dp" />
 
+```
+
+Update Speed From Java
+-------------
+
+```
+DigitSpeedView digitSpeedView = (DigitSpeedView)findViewById(R.id.digit_speed_view);
+digitSpeedView.updateSpeed(120);
+```
+
+OnSpeedChangeListener
+-------------
+
+```
+DigitSpeedView digitSpeedView = (DigitSpeedView)findViewById(R.id.digit_speed_view);
+digitSpeedView.setOnSpeedChangeListener(new OnSpeedChangeListener() {
+    @Override
+    public void onSpeedChange(DigitSpeedView digitSpeedView, boolean isSpeedUp) {
+        //Current speed: digitSpeedView.getSpeed();
+    }
+});
 ```
 
 License
