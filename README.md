@@ -22,7 +22,7 @@ Download
 ```gradle
 
 dependencies {
-	    compile 'com.github.capur16:digitspeedviewlib:1.0.2'
+	    compile 'com.github.capur16:digitspeedviewlib:1.0.3'
 }
 
 ```
@@ -33,7 +33,7 @@ for **maven**
 <dependency>
   <groupId>com.github.capur16</groupId>
   <artifactId>digitspeedviewlib</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <type>pom</type>
 </dependency>
 ```
