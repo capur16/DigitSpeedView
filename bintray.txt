@@ -1,1 +1,0 @@
-For upload new version run command "gradlew bintrayUpload"
